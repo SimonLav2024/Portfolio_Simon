@@ -106,13 +106,12 @@ body {
 .menu-btn {
     position: fixed;
     top: 20px;
-    left: 50px;
+    left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
-    padding: 10px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     border: 3px solid #fff;
@@ -120,23 +119,13 @@ body {
     background-color: #2c3e50;
     z-index: 2;
 }
-.menu-btn:hover {
-    background-color: #00274d;
-}
-@media (max-width: 600px) {
-    .menu-btn {
-        position: relative;
-        top: 10px;
-        left: 5px;
-        z-index: 2;
-    }
-}
 .menu-btn__burger {
     width: 30px;
     height: 3px;
     background: #fff;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    z-index: 1000;
 }
 .menu-btn__burger::before,
 .menu-btn__burger::after {
@@ -146,7 +135,7 @@ body {
     height: 3px;
     background: #fff;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
     transform: translateY(-10px);
@@ -171,7 +160,7 @@ body {
     height: 100vh;
     width: 250px;
     background-color: #2c3e50;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 1;
 }
 .sidebar.open {
@@ -180,15 +169,16 @@ body {
 .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 150px;
+    margin-top: 100px;
+    text-decoration: none;
 }
 .sidebar ul li {
     padding: 15px 25px;
+    font-size: 18px;
     border-bottom: 1px solid #34495e;
 }
 .txt {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: #fff;
 }
 /* --------------------------------------fin----------------------------------------- */
