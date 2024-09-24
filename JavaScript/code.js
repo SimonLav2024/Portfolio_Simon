@@ -19,9 +19,17 @@ let menuOpen = false;
                 menuBtn.classList.add('open');
                 sidebar.classList.add('open');
                 menuOpen = true;
-            } else {
+            }else{
                 menuBtn.classList.remove('open');
                 sidebar.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+        // ----------esto es para que se cierre el sidebar cuando clicke fuera del mismo
+        document.addEventListener("click", (event) => {
+            if(!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+                sidebar.classList.remove("open");
+                menuBtn.classList.remove("open");
                 menuOpen = false;
             }
         });
@@ -66,3 +74,6 @@ window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 drawWave();
 // ---------------------------------------fin----------------------------------
+
+
+
