@@ -170,6 +170,11 @@ html {
     text-decoration: none;
     color: #fff;
 }
+@media (min-width: 601px) {
+    .txt {
+        margin-left: 50px;
+    }
+}
 #openSidebarBtn {
     display: none;
 }
@@ -182,26 +187,24 @@ html {
     }
     .sidebar {
         width: 200px;
-        background-color: #000000;
+        background-color: #1e466e;
         transition: all 0.5s ease-in-out;
     }
-    /* Pestaña pequeña para abrir el sidebar */
     .sidebar-tab {
         position: fixed;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
         margin-left: -45px;
-        background-color: #000000;
+        background-color: #1e466e;
         color: white;
         padding: 60px 5px 60px 50px;
         cursor: pointer;
-        font-size: 12px; /* Tamaño de la flecha */
+        font-size: 12px;
         transition: all 0.5s ease-in-out;
         border-radius: 0 5px 5px 0;
-        z-index: 1000; /* Encima del sidebar */
+        z-index: 1000;
     }
-    /* Cuando el sidebar está abierto */
     #sidebar.open {
         left: 0px;
     }
@@ -213,10 +216,10 @@ html {
         display: block;
     }
     .parallax.shifted {
-        margin-left: 200px; /* Mueve el contenido cuando el sidebar está abierto */
+        margin-left: 200px;
     }
     .sidebar-tab.opened {
-        left: 200px;; /* Mueve la pestaña con el sidebar abierto */
+        left: 200px;
     }
 }
 /* --------------------------------------fin----------------------------------------- */
@@ -230,7 +233,6 @@ html {
     z-index: -1;
 }
 /* ---------------------------------------fin----------------------------------------- */
-
 #parallax {
     z-index: 1000;
 }

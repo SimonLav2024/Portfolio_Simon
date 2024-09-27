@@ -1,12 +1,12 @@
 
 //------------------------------- navbar--------------------------------
 const menuIcon = document.getElementById('menuIcon');
-        const navLinks = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
 
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuIcon.classList.toggle('active');
-        });
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+});
 //----------------------------------fin-----------------------------------
 
 // ------------------------------sidebar----------------------------------
@@ -19,50 +19,45 @@ const mainContent = document.querySelector(".parallax");
 let openSidebarBtnOpen = false;
 
 
-        menuBtn.addEventListener('click', () => {
-            console.log("click");
-            if (!menuOpen) {
-                menuBtn.classList.add('open');
-                sidebar.classList.add('open');
-                menuOpen = true;
-            }else{
-                menuBtn.classList.remove('open');
-                sidebar.classList.remove('open');
-                menuOpen = false;
-            }
-        });
-        // ----------esto es para que se cierre el sidebar cuando clicke fuera del mismo
-        document.addEventListener("click", (event) => {
-            if(window.innerWidth > 600){
-                if(!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
-                    sidebar.classList.remove("open");
-                    menuBtn.classList.remove("open");
-                    menuOpen = false;
-                }
-            }
-        });
+menuBtn.addEventListener('click', () => {
+    console.log("click");
+    if (!menuOpen) {
+        menuBtn.classList.add('open');
+        sidebar.classList.add('open');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        sidebar.classList.remove('open');
+        menuOpen = false;
+    }
+});
+// ----------esto es para que se cierre el sidebar cuando clicke fuera del mismo
+document.addEventListener("click", (event) => {
+    if (window.innerWidth > 600) {
+        if (!sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+            sidebar.classList.remove("open");
+            menuBtn.classList.remove("open");
+            menuOpen = false;
+        }
+    }
+});
 
-
-// Función para abrir/cerrar el sidebar
+// ---------------Función para abrir/cerrar el sidebar en vista movil
 openSidebarBtn.addEventListener("click", () => {
-    
-    if (!openSidebarBtnOpen){
+
+    if (!openSidebarBtnOpen) {
         openSidebarBtn.classList.add('open');
         sidebarMovil.classList.add('open');
         openSidebarBtnOpen = true;
-    }else{
+    } else {
         openSidebarBtn.classList.remove('open');
         sidebarMovil.classList.remove('open');
         openSidebarBtnOpen = false;
     }
-
-    // Alterna el margen de la main-content
     mainContent.classList.toggle("shifted");
 
-    // Cambia la posición de la pestaña
     openSidebarBtn.classList.toggle("opened");
-    
-    // Si el sidebar está abierto, cambia el icono a una flecha hacia la derecha
+
     if (sidebar.classList.contains("open")) {
         openSidebarBtn.innerHTML = '&#9654;'; // Flecha hacia la derecha
     } else {
@@ -82,7 +77,7 @@ function resizeCanvas() {
 
 function drawWave() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     // Fondo azul
     ctx.fillStyle = '#3498db';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
