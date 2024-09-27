@@ -31,36 +31,47 @@
             &#9664; <!-- Símbolo de flecha hacia la izquierda -->
         </div>
         <nav class="sidebar" id="sidebar">
+            <h1 class="cabeza">Contact</h1>
             <div class="nav-links">
-                <ul>
-                    <li><a href="#" class="txt">Inicio</a></li>
-                    <li><a href="#" class="txt">Taller</a></li>
-                    <li><a href="#" class="txt">Repuestos</a></li>
-                    <li><a href="#" class="txt">Contacto</a></li>
-                </ul>
+                    <div class="ajuste-img">
+                        <img class="imagenes" src="img/miniatures/min-arboles.jpg" title="arboles" alt="arboles" id="0" data-full="img\arboles.JPG">
+                    </div>
+                    <div class="ajuste-img">
+                        <img class="imagenes" src="img/miniatures/min-escaleras.jpg" title="escaleras" alt="escaleras" id="1" data-full="img\escaleras.JPG">
+                    </div>
+                    <div class="ajuste-img">
+                        <img class="imagenes" src="img/miniatures/min-pasillo.jpg" title="pasillo" alt="pasillo" id="2" data-full="img\pasillo.JPG">
+                    </div>
+                    <div class="ajuste-img">
+                        <img class="imagenes" src="img/miniatures/min-vistas.jpg" title="vistas" alt="vistas" id="3" data-full="img\teide.JPG">
+                    </div>
+                    <div class="ajuste-img">
+                        <img class="imagenes" src="img/miniatures/min-teide.jpg" title="teide" alt="teide" id="4" data-full="img\vistas.JPG">
+                    </div>
             </div>
+                <!-- contenido de la ventana modal -->
+            <div id="imagenModal" class="modal">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+                    <img src="" alt="imagen ampliada" class="modal-image">
+                </div>
+            </div>
+                <!-- fin de la ventna modal -->
         </nav>
     <!-- ----------------------------------------fin------------------------------------------------ -->
-    <!-- ----------------------------------oleaje azul---------------------------------------------- -->
-    <canvas id="waveCanvas"></canvas>
-    <!-- ----------------------------------------fin------------------------------------------------ -->
+   
      <!-- ---------------------------------foto de perfil------------------------------------------- -->
-     <div id="parallax" class="parallax">
-        <div class="content">
-            <a href="#" class="sin-efecto">
-                <section>
-                    <!-- <img src="img/yo_CV.jpeg" alt=""> -->
-                    <h1>hola</h1>
-                </section>
-            </a>
-        </div>
+    <div id="parallax" class="parallax">
+        <h1>hola</h1>
     </div>
 
 
 
 
 
-
+ <!-- ----------------------------------oleaje azul---------------------------------------------- -->
+ <canvas id="waveCanvas"></canvas>
+ <!-- ----------------------------------------fin------------------------------------------------ -->
 
     <script src="JavaScript/code.js"></script>
 </body>
