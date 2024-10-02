@@ -217,6 +217,7 @@ html {
     }
 }
 /* --------------------------------------fin----------------------------------------- */
+
 /* -----------------------------------oleaje azul------------------------------------ */
 #waveCanvas {
     position: absolute;
@@ -232,6 +233,10 @@ html {
 }
 /*--------------------------------------modal------------------------------------------*/
 .cabeza {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 4rem;
     color: white;
@@ -266,5 +271,63 @@ html {
     top: 15px;
     cursor: pointer;
 }
+.imagenes {
+    width: 100px;
+    height: 100px;
+}
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+/* -----------------------------------------------fin-------------------------------------------------- */
+
+/* ----------------------------------------Telefono------------------------------------------------- */
+.phone {
+    width: 2rem;
+    height: 4rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 0.4rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.1);
+    animation: vibrate 0.3s infinite;
+}
+.screen {
+    width: 1.8rem;
+    height: 3.2rem;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    position: absolute;
+    top: 0.4rem;
+    left: 0.1rem;
+    border-radius: 0.2rem;
+}
+.speaker {
+    width: 0.8rem;
+    height: 0.1rem;
+    background-color: #95a5a6;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.6rem;
+    border-radius: 0.05rem;
+}
+.home-button {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #95a5a6;
+    position: absolute;
+    bottom: 0.1rem;
+    left: 0.8rem;
+    border-radius: 50%;
+}
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+/* -------------------------------------------------fin---------------------------------------------------- */
 
 
