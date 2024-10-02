@@ -145,16 +145,6 @@ html {
 .sidebar.open {
     left: 0;
 }
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 100px;
-    text-decoration: none;
-}
-.sidebar ul li {
-    padding: 15px 25px;
-    font-size: 18px;
-}
 @media (min-width: 601px) {
     .txt {
         margin-left: 50px;
@@ -273,15 +263,6 @@ html {
     color: #ffffff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
-/* .imagenes:hover {
-    animation-name: hover;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-}
-@keyframes hover {
-    from {transform: scale(1);}
-    to {transform: scale(1.5);}
-} */
 .thumbnails {
     display: flex;
     flex-direction: row;
