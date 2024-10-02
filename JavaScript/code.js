@@ -131,3 +131,25 @@ window.onclick = (event) => {
     }
 }
 // --------------------------------------fin------------------------------------
+
+// -------------------------------------iconos del sidebar------------------------------
+document.querySelectorAll('.ajuste-img').forEach(icon => {
+    icon.addEventListener('mousemove', (e) => {
+        const rect = icon.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const angleX = (y - centerY) / 5;
+        const angleY = (centerX - x) / 5;
+        
+        icon.style.transform = `scale(1.2) translateY(-10px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    });
+    
+    icon.addEventListener('mouseleave', () => {
+        icon.style.transform = 'scale(1) translateY(0) rotateX(0) rotateY(0)';
+    });
+});
+// ---------------------------------fin------------------------------------------
