@@ -242,5 +242,18 @@ document.querySelectorAll('.ajuste-img').forEach(icon => {
 });
 // ---------------------------------fin------------------------------------------
 
+// Obtener el contador del almacenamiento local o inicializarlo a 0
+let contadorVisitas = localStorage.getItem('contadorVisitas') || 0;
 
+// Incrementar el contador
+contadorVisitas++;
+
+// Guardar el nuevo valor en el almacenamiento local
+localStorage.setItem('contadorVisitas', contadorVisitas);
+
+// Mostrar el contador en la página
+document.addEventListener('DOMContentLoaded', function() {
+    const elementoContador = document.getElementById('numero-visitas');
+    elementoContador.textContent = contadorVisitas;
+});
 
