@@ -239,11 +239,63 @@ html {
     align-items: center;
     height: 100%;
 }
-.modal-image {
+.modal-image1 {
     max-width: 90%;
     max-height: 90%;
 }
-.close {
+.modal-image2 {
+    max-width: 90%;
+    max-height: 90%;
+}
+.modal-image3 {
+    max-width: 90%;
+    max-height: 90%;
+}
+.modal-image4 {
+    max-width: 90%;
+    max-height: 90%;
+}
+.modal-image5 {
+    max-width: 90%;
+    max-height: 90%;
+}
+.close1 {
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    cursor: pointer;
+}
+.close2 {
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    cursor: pointer;
+}
+.close3 {
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    cursor: pointer;
+}
+.close4 {
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    cursor: pointer;
+}
+.close5 {
     color: antiquewhite;
     font-size: 40px;
     font-weight: bold;

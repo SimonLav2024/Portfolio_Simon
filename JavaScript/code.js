@@ -106,37 +106,115 @@ drawWave();
 // ---------------------------------------fin----------------------------------
 
 // -------------------------------modal-------------------------------------
-const modal = document.getElementById("imagenModal");
-const modalImg = document.querySelector(".modal-image");
-const thumbnail = document.querySelectorAll(".imagenes");
-const closeBtn = document.querySelector(".close");
+const modal1 = document.getElementById("imagenModal1");
+const modal2 = document.getElementById("imagenModal2");
+const modal3 = document.getElementById("imagenModal3");
+const modal4 = document.getElementById("imagenModal4");
+const modal5 = document.getElementById("imagenModal5");
+const modalImg1 = document.querySelector(".modal-image1");
+const modalImg2 = document.querySelector(".modal-image2");
+const modalImg3 = document.querySelector(".modal-image3");
+const modalImg4 = document.querySelector(".modal-image4");
+const modalImg5 = document.querySelector(".modal-image5");
+const thumbnail1 = document.getElementById("0");
+const thumbnail2 = document.getElementById("1");
+const thumbnail3 = document.getElementById("2");
+const thumbnail4 = document.getElementById("3");
+const thumbnail5 = document.getElementById("4");
+const closeBtn1 = document.querySelector(".close1");
+const closeBtn2 = document.querySelector(".close2");
+const closeBtn3 = document.querySelector(".close3");
+const closeBtn4 = document.querySelector(".close4");
+const closeBtn5 = document.querySelector(".close5");
 const enlaceGit = document.getElementById("eGit");
 const enlaceLinkedin = document.getElementById("eLink");
 
-thumbnail.forEach(thumb => {
-    thumb.addEventListener("click", (event) => {
+    thumbnail1.addEventListener("click", (event) => {
         event.preventDefault();
-        modal.style.display = "block";
-        modalImg.src = thumb.getAttribute("data-full");
-        modalImg.alt = thumb.alt;
+        modal1.style.display = "block";
+        modalImg1.src = thumbnail1.getAttribute("data-full");
+        modalImg1.alt = thumbnail1.alt;
     });
-});
+    thumbnail2.addEventListener("click", (event) => {
+        event.preventDefault();
+        modal2.style.display = "block";
+        modalImg2.alt = thumbnail2.alt;
+        modalImg2.src = thumbnail2.getAttribute("data-full");
+    });
+    thumbnail3.addEventListener("click", (event) => {
+        event.preventDefault();
+        modal3.style.display = "block";
+        modalImg3.src = thumbnail3.getAttribute("data-full");
+        modalImg3.alt = thumbnail3.alt;
+    });
+    thumbnail4.addEventListener("click", (event) => {
+        event.preventDefault();
+        modal4.style.display = "block";
+        modalImg4.src = thumbnail4.getAttribute("data-full");
+        modalImg4.alt = thumbnail4.alt;
+    });
+    thumbnail5.addEventListener("click", (event) => {
+        event.preventDefault();
+        modal5.style.display = "block";
+        modalImg5.src = thumbnail5.getAttribute("data-full");
+        modalImg5.alt = thumbnail5.alt;
+    });
 
-modalImg.addEventListener("click", () => {
+modalImg3.addEventListener("click", () => {
     window.location.href = enlaceGit.href;
 });
-
-
-// esto es para cerrar el modal
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+modalImg5.addEventListener("click", () => {
+    window.location.href = enlaceLinkedin.href;
 });
 
-window.onclick = (event) => {
-    if(event.target.classList.contains("modal-content")){
-        modal.style.display = "none";
+closeBtn1.addEventListener("click", () => {
+    modal1.style.display = "none";
+});
+closeBtn2.addEventListener("click", () => {
+    modal2.style.display = "none";
+});
+closeBtn3.addEventListener("click", () => {
+    modal3.style.display = "none";
+});
+closeBtn4.addEventListener("click", () => {
+    modal4.style.display = "none";
+});
+closeBtn5.addEventListener("click", () => {
+    modal5.style.display = "none";
+});
+
+
+modal1.addEventListener("click", (e) => {
+    clasesMod = e.target.className;
+    if(clasesMod == "modal-content") {
+        modal1.style.display = "none";
     }
-}
+});
+modal2.addEventListener("click", (e) => {
+    clasesMod = e.target.className;
+    if(clasesMod == "modal-content") {
+        modal2.style.display = "none";
+    }
+});
+modal3.addEventListener("click", (e) => {
+    clasesMod = e.target.className;
+    if(clasesMod == "modal-content") {
+        modal3.style.display = "none";
+    }
+});
+modal4.addEventListener("click", (e) => {
+    clasesMod = e.target.className;
+    if(clasesMod == "modal-content") {
+        modal4.style.display = "none";
+    }
+});
+modal5.addEventListener("click", (e) => {
+    clasesMod = e.target.className;
+    if(clasesMod == "modal-content") {
+        modal5.style.display = "none";
+    }
+});
+
 // --------------------------------------fin------------------------------------
 
 // -------------------------------------iconos del sidebar------------------------------
