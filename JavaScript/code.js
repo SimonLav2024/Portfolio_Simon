@@ -124,8 +124,8 @@ thumbnail.forEach(thumb => {
 
 modalImg.addEventListener("click", () => {
     window.location.href = enlaceGit.href;
-    window.location.href = enlaceLinkedin.href;
 });
+
 
 // esto es para cerrar el modal
 closeBtn.addEventListener("click", () => {
