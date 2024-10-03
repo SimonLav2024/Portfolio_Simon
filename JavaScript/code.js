@@ -20,7 +20,6 @@ let openSidebarBtnOpen = false;
 
 
 menuBtn.addEventListener('click', () => {
-    console.log("click");
     if (!menuOpen) {
         menuBtn.classList.add('open');
         sidebar.classList.add('open');
@@ -111,13 +110,21 @@ const modal = document.getElementById("imagenModal");
 const modalImg = document.querySelector(".modal-image");
 const thumbnail = document.querySelectorAll(".imagenes");
 const closeBtn = document.querySelector(".close");
+const enlaceGit = document.getElementById("eGit");
+const enlaceLinkedin = document.getElementById("eLink");
 
 thumbnail.forEach(thumb => {
-    thumb.addEventListener("click", () => {
+    thumb.addEventListener("click", (event) => {
+        event.preventDefault();
         modal.style.display = "block";
         modalImg.src = thumb.getAttribute("data-full");
         modalImg.alt = thumb.alt;
     });
+});
+
+modalImg.addEventListener("click", () => {
+    window.location.href = enlaceGit.href;
+    window.location.href = enlaceLinkedin.href;
 });
 
 // esto es para cerrar el modal
@@ -153,5 +160,6 @@ document.querySelectorAll('.ajuste-img').forEach(icon => {
     });
 });
 // ---------------------------------fin------------------------------------------
+
 
 
