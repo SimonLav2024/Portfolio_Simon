@@ -128,59 +128,58 @@ const closeBtn4 = document.querySelector(".close4");
 const closeBtn5 = document.querySelector(".close5");
 const enlaceGit = document.getElementById("eGit");
 const enlaceLinkedin = document.getElementById("eLink");
+const ocultarboton = document.querySelector(".menu-btn");
 
     thumbnail1.addEventListener("click", (event) => {
-        event.preventDefault();
+        ocultarboton.style.visibility = "hidden";
         modal1.style.display = "block";
         modalImg1.src = thumbnail1.getAttribute("data-full");
         modalImg1.alt = thumbnail1.alt;
     });
     thumbnail2.addEventListener("click", (event) => {
-        event.preventDefault();
+        ocultarboton.style.visibility = "hidden";
         modal2.style.display = "block";
         modalImg2.alt = thumbnail2.alt;
         modalImg2.src = thumbnail2.getAttribute("data-full");
     });
     thumbnail3.addEventListener("click", (event) => {
-        event.preventDefault();
+        ocultarboton.style.visibility = "hidden";
         modal3.style.display = "block";
         modalImg3.src = thumbnail3.getAttribute("data-full");
         modalImg3.alt = thumbnail3.alt;
     });
     thumbnail4.addEventListener("click", (event) => {
-        event.preventDefault();
+        ocultarboton.style.visibility = "hidden";
         modal4.style.display = "block";
         modalImg4.src = thumbnail4.getAttribute("data-full");
         modalImg4.alt = thumbnail4.alt;
     });
     thumbnail5.addEventListener("click", (event) => {
-        event.preventDefault();
+        ocultarboton.style.visibility = "hidden";
         modal5.style.display = "block";
         modalImg5.src = thumbnail5.getAttribute("data-full");
         modalImg5.alt = thumbnail5.alt;
     });
 
-modalImg3.addEventListener("click", () => {
-    window.location.href = enlaceGit.href;
-});
-modalImg5.addEventListener("click", () => {
-    window.location.href = enlaceLinkedin.href;
-});
-
 closeBtn1.addEventListener("click", () => {
     modal1.style.display = "none";
+    ocultarboton.style.visibility = "visible";
 });
 closeBtn2.addEventListener("click", () => {
     modal2.style.display = "none";
+    ocultarboton.style.visibility = "visible";
 });
 closeBtn3.addEventListener("click", () => {
     modal3.style.display = "none";
+    ocultarboton.style.visibility = "visible";
 });
 closeBtn4.addEventListener("click", () => {
     modal4.style.display = "none";
+    ocultarboton.style.visibility = "visible";
 });
 closeBtn5.addEventListener("click", () => {
     modal5.style.display = "none";
+    ocultarboton.style.visibility = "visible";
 });
 
 
@@ -188,33 +187,37 @@ modal1.addEventListener("click", (e) => {
     clasesMod = e.target.className;
     if(clasesMod == "modal-content") {
         modal1.style.display = "none";
+        ocultarboton.style.visibility = "visible";
     }
 });
 modal2.addEventListener("click", (e) => {
     clasesMod = e.target.className;
     if(clasesMod == "modal-content") {
         modal2.style.display = "none";
+        ocultarboton.style.visibility = "visible";
     }
 });
 modal3.addEventListener("click", (e) => {
     clasesMod = e.target.className;
     if(clasesMod == "modal-content") {
         modal3.style.display = "none";
+        ocultarboton.style.visibility = "visible";
     }
 });
 modal4.addEventListener("click", (e) => {
     clasesMod = e.target.className;
     if(clasesMod == "modal-content") {
         modal4.style.display = "none";
+        ocultarboton.style.visibility = "visible";
     }
 });
 modal5.addEventListener("click", (e) => {
     clasesMod = e.target.className;
     if(clasesMod == "modal-content") {
         modal5.style.display = "none";
+        ocultarboton.style.visibility = "visible";
     }
 });
-
 // --------------------------------------fin------------------------------------
 
 // -------------------------------------iconos del sidebar------------------------------
