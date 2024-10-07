@@ -242,18 +242,28 @@ document.querySelectorAll('.ajuste-img').forEach(icon => {
 });
 // ---------------------------------fin------------------------------------------
 
-// Obtener el contador del almacenamiento local o inicializarlo a 0
+// --------------------------------contador de visitas---------------------------
 let contadorVisitas = localStorage.getItem('contadorVisitas') || 0;
+let combinacion = [];
+const combinacionCorrecta = ["s","i","m","o","n"];
 
-// Incrementar el contador
+// Incrementar el contador de visitas
 contadorVisitas++;
-
-// Guardar el nuevo valor en el almacenamiento local
 localStorage.setItem('contadorVisitas', contadorVisitas);
 
-// Mostrar el contador en la página
-document.addEventListener('DOMContentLoaded', function() {
-    const elementoContador = document.getElementById('numero-visitas');
-    elementoContador.textContent = contadorVisitas;
+document.addEventListener('keydown', function(event) {
+    combinacion.push(event.key);
+    if (combinacion.length > combinacionCorrecta.length) {
+        combinacion.shift();
+    }
+    if (JSON.stringify(combinacion) === JSON.stringify(combinacionCorrecta)) {
+        mostrarContador();
+    }
 });
 
+function mostrarContador() {
+    const contadorElement = document.getElementById('contador');
+    contadorElement.style.display = 'block';
+    contadorElement.textContent = `Número de visitas: ${contadorVisitas}`;
+}
+// ---------------------------------fin------------------------------------------

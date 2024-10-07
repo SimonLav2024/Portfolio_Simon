@@ -451,18 +451,11 @@ html {
     width: 4rem;
 }
 #contador {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center;
-}
-.cont {
-    color: #333;
-    margin-bottom: 10px;
-}
-#numero-visitas {
+    display: none;
     font-size: 24px;
-    font-weight: bold;
-    color: #4a90e2;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
