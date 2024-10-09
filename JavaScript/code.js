@@ -246,8 +246,8 @@ document.querySelectorAll('.ajuste-img').forEach(icon => {
 let contadorVisitas = localStorage.getItem('contadorVisitas') || 0;
 let combinacion = [];
 const combinacionCorrecta = ["s","i","m","o","n"];
+const combinacionCierre = ["c","l","o","s","e"];
 
-// Incrementar el contador de visitas
 contadorVisitas++;
 localStorage.setItem('contadorVisitas', contadorVisitas);
 
@@ -259,6 +259,9 @@ document.addEventListener('keydown', function(event) {
     if (JSON.stringify(combinacion) === JSON.stringify(combinacionCorrecta)) {
         mostrarContador();
     }
+    if (JSON.stringify(combinacion) === JSON.stringify(combinacionCierre)) {
+        ocultarContador();
+    }
 });
 
 function mostrarContador() {
@@ -266,4 +269,32 @@ function mostrarContador() {
     contadorElement.style.display = 'block';
     contadorElement.textContent = `Número de visitas: ${contadorVisitas}`;
 }
+function ocultarContador() {
+    const contadorElement = document.getElementById('contador');
+    contadorElement.style.display = 'none';
+}
 // ---------------------------------fin------------------------------------------
+
+// ---------------------------------knowledge-----------------------------------
+const lenguajes = {
+    html: '/img/knowledges/html.png',
+    css: '/img/knowledges/css.png',
+    javascript: '/img/knowledges/javascript.png',
+    sql: '/img/knowledges/sql.png',
+    php: '/img/knowledges/php.png',
+    react: '/img/knowledges/react.png'
+};
+
+const imageContainer = document.getElementById('imageContainer');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const tech = this.getAttribute('data-tech');
+        const imageSrc = lenguajes[tech];
+        imageContainer.style.display = "flex";
+        imageContainer.innerHTML = `<img class="img-k" src="${imageSrc}" alt="${tech} technology">`;
+    });
+});
+
+
