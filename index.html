@@ -15,12 +15,49 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="nav-links" id="navLinks">
-                <a href="#">Inicio</a>
-                <a href="#">Acerca</a>
-                <a href="#">Servicios</a>
-                <a href="#">Contacto</a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Languages</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>English</p>
+                        <p>Español</p>
+                        <p>Русский</p>
+                        <p>Українська</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Experience</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Camarero</p>
+                        <p>Operario de Mantenimiento</p>
+                        <p>Reponedor</p>
+                        <p>Team Member</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Education</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Curso de Desarrollo de Aplicaciónes con Tecnologías Web</p>
+                        <p>Grado en Ciencias Políticas y de la Administración</p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <a href="#">Others</a>
+                    </button>
+                    <div class="dropdown-content">
+                        <p>Carnét: A y B y vehículo propio</p>
+                        <p>Conocimientos de Bootstrap y GitHub</p>
+                        <p>Trabajo en equipo con bases de datos</p>
+                        <p>Manejo de APIs y JSON</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-icon" id="menuIcon">☰</div>
         </div>
     </nav>
     <!-- -------------------------------------fin-------------------------------------------------- -->
@@ -121,12 +158,12 @@
         <div class="knowledges">
             <div class="buttons">
                 <h1 class="conocim"><b>Knowledge</b></h1>
-                <button data-tech="html">HTML</button>
-                <button data-tech="css">CSS</button>
-                <button data-tech="javascript">JavaScript</button>
-                <button data-tech="sql">SQL</button>
-                <button data-tech="php">PHP</button>
-                <button data-tech="react">React</button>
+                <button class="botonK" data-tech="html">HTML</button>
+                <button class="botonK" data-tech="css">CSS</button>
+                <button class="botonK" data-tech="javascript">JavaScript</button>
+                <button class="botonK" data-tech="sql">SQL</button>
+                <button class="botonK" data-tech="php">PHP</button>
+                <button class="botonK" data-tech="react">React</button>
             </div>
             <div id="imageContainer">
                 <img class="img-k" src="" alt="Selecciona una tecnología">

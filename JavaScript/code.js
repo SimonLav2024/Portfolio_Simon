@@ -1,11 +1,32 @@
 
 //------------------------------- navbar--------------------------------
-const menuIcon = document.getElementById('menuIcon');
-const navLinks = document.getElementById('navLinks');
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownBtns = document.querySelectorAll('.dropbtn');
 
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuIcon.classList.toggle('active');
+    // Función para alternar la visibilidad del menú desplegable
+    function toggleDropdown(dropdownContent) {
+        dropdownContent.classList.toggle('show');
+    }
+
+    // Event listener para el botón del dropdown
+    dropdownBtns.forEach(dropdownBtn => {
+        dropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Evita que el clic se propague al documento
+        const dropdownContent = dropdownBtn.nextElementSibling;
+        
+        toggleDropdown(dropdownContent);
+    });
+});
+
+    // Event listener para cerrar el dropdown al hacer clic fuera de él
+    document.addEventListener('click', function(e) {
+        dropdownBtns.forEach(dropdownBtn => {
+            const dropdownContent = dropdownBtn.nextElementSibling;
+            if (!dropdownBtn.contains(e.target) && dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+    });
 });
 //----------------------------------fin-----------------------------------
 
@@ -286,7 +307,7 @@ const lenguajes = {
 };
 
 const imageContainer = document.getElementById('imageContainer');
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.botonK');
 
 buttons.forEach(button => {
     button.addEventListener('click', function() {
