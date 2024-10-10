@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener para el botón del dropdown
     dropdownBtns.forEach(dropdownBtn => {
         dropdownBtn.addEventListener('click', function(e) {
+            console.log(e.target);
         e.stopPropagation(); // Evita que el clic se propague al documento
         const dropdownContent = dropdownBtn.nextElementSibling;
         
