@@ -324,7 +324,7 @@ buttons.forEach(button => {
     });
 });
 
-
+// --------------------footer---------------------------
 const carencias = document.querySelector(".car");
 const botonCar = document.querySelector(".carencias");
 let abiertoCar = false;
