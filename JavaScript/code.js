@@ -1,32 +1,39 @@
 
 //------------------------------- navbar--------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownBtns = document.querySelectorAll('.dropbtn');
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.navbar-item');
+    
+    navItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('visible');
+        }, index * 200);
 
-    // Función para alternar la visibilidad del menú desplegable
-    function toggleDropdown(dropdownContent) {
-        dropdownContent.classList.toggle('show');
-    }
-
-    // Event listener para el botón del dropdown
-    dropdownBtns.forEach(dropdownBtn => {
-        dropdownBtn.addEventListener('click', function(e) {
-            console.log(e.target);
-        e.stopPropagation(); // Evita que el clic se propague al documento
-        const dropdownContent = dropdownBtn.nextElementSibling;
-        
-        toggleDropdown(dropdownContent);
-    });
-});
-
-    // Event listener para cerrar el dropdown al hacer clic fuera de él
-    document.addEventListener('click', function(e) {
-        dropdownBtns.forEach(dropdownBtn => {
-            const dropdownContent = dropdownBtn.nextElementSibling;
-            if (!dropdownBtn.contains(e.target) && dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
+        item.addEventListener('click', (e) => {
+            const dropdown = item.querySelector('.dropdown');
+            if (dropdown) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                // Cerrar otros desplegables abiertos
+                navItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherDropdown = otherItem.querySelector('.dropdown');
+                        if (otherDropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    }
+                });
             }
         });
+    });
+
+    // Cerrar desplegables al hacer clic fuera
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar-item')) {
+            document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
     });
 });
 //----------------------------------fin-----------------------------------
@@ -39,7 +46,6 @@ let menuOpen = false;
 const openSidebarBtn = document.getElementById("openSidebarBtn");
 const mainContent = document.querySelector(".parallax");
 let openSidebarBtnOpen = false;
-
 
 menuBtn.addEventListener('click', () => {
     if (!menuOpen) {
@@ -95,7 +101,6 @@ function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
-
 function drawWave() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -319,4 +324,20 @@ buttons.forEach(button => {
     });
 });
 
+
+const carencias = document.querySelector(".car");
+const botonCar = document.querySelector(".carencias");
+let abiertoCar = false;
+
+botonCar.addEventListener("click", () => {
+    if(!abiertoCar) {
+        carencias.classList.add("open");
+        botonCar.classList.add("open");
+        abiertoCar = true;
+    }else{
+        carencias.classList.remove("open");
+        botonCar.classList.remove("open");
+        abiertoCar = false;
+    }
+});
 
