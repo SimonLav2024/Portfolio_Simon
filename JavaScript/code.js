@@ -281,6 +281,15 @@ const lenguajes = {
 const imageContainer = document.getElementById('imageContainer');
 const buttons = document.querySelectorAll('.botonK');
 
+// Función para establecer la imagen inicial
+function setInitialImage() {
+    imageContainer.style.display = "flex";
+    imageContainer.innerHTML = `<img class="img-k" src="img/fondo2.jpeg" alt="technology">`;
+}
+
+// Establecer la imagen inicial al cargar la página
+document.addEventListener('DOMContentLoaded', setInitialImage);
+
 buttons.forEach(button => {
     button.addEventListener('click', function() {
         const tech = this.getAttribute('data-tech');
