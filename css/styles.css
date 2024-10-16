@@ -4,12 +4,12 @@ body {
     font-family: Arial, sans-serif;
     overflow: hidden;
     background-color: #2980b9;
+    height: 100%;
 }
 html {
     margin: 0;
     padding: 0;
 }
-
 /* ---------------------------------navbar------------------------------------- */
 .navbar {
     background-color: #3498db;
@@ -161,57 +161,8 @@ html {
 .sidebar.open {
     left: 0;
 }
-@media (min-width: 601px) {
-    .txt {
-        margin-left: 50px;
-    }
-}
 #openSidebarBtn {
     display: none;
-}
-@media (max-width: 600px) {
-    .menu-btn {
-        display: none;
-    }
-    .menu-btn__burger {
-        display: none;
-    }
-    .sidebar {
-        width: 200px;
-        background-color: #1e466e;
-        transition: all 0.5s ease-in-out;
-    }
-    .sidebar-tab {
-        position: fixed;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        margin-left: -45px;
-        background-color: #1e466e;
-        color: white;
-        padding: 60px 5px 60px 50px;
-        cursor: pointer;
-        font-size: 12px;
-        transition: all 0.5s ease-in-out;
-        border-radius: 0 5px 5px 0;
-        z-index: 1000;
-    }
-    #sidebar.open {
-        left: 0px;
-    }
-    .parallax {
-        margin-left: 0;
-        transition: all 0.5s ease-in-out;
-    }
-    #openSidebarBtn {
-        display: block;
-    }
-    .parallax.shifted {
-        margin-left: 200px;
-    }
-    .sidebar-tab.opened {
-        left: 200px;
-    }
 }
 /* --------------------------------------fin----------------------------------------- */
 
@@ -396,16 +347,6 @@ html {
     opacity: 1;
     bottom: -40px;
 }
-@media (max-width: 600px) {
-    .thumbnails {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .ajuste-img {
-        width: 60px;
-        height: 60px;
-    }
-}
 /* -----------------------------------------------fin-------------------------------------------------- */
 
 /* ----------------------------------------Telefono------------------------------------------------- */
@@ -571,18 +512,11 @@ html {
     max-height: 100%;
     object-fit: cover;
 }
-@media (max-width: 600px) {
-    .buttons {
-        align-items: stretch;
-    }
-    .botonK{
-        width: 100%;
-    }
-}
 /* -------------------------------------------------------fin------------------------------------------- */
 /* ----------------------------------------------------footer------------------------------------- */
 .footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     color: white;
     text-shadow: 1px 2px 0 rgba(12, 12, 20, 0.507);
 }
