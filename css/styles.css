@@ -516,10 +516,12 @@ html {
 /* -------------------------------------------------------fin------------------------------------------- */
 /* ----------------------------------------------------footer------------------------------------- */
 .footer {
-    display: flex;
-    justify-content: center;
     color: white;
     text-shadow: 1px 2px 0 rgba(12, 12, 20, 0.507);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .carencias {
     display: flex;
