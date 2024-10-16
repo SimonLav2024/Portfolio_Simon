@@ -530,6 +530,8 @@ html {
     text-decoration: none;
     color: white;
     transition: all 0.7s ease-in-out;
+    position: fixed;
+    bottom: 40px;
     right: 0%;
 }
 .carencias.open {
