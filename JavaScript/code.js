@@ -268,40 +268,6 @@ document.querySelectorAll('.ajuste-img').forEach(icon => {
     });
 });
 // ---------------------------------fin------------------------------------------
-
-// --------------------------------contador de visitas---------------------------
-let contadorVisitas = localStorage.getItem('contadorVisitas') || 0;
-let combinacion = [];
-const combinacionCorrecta = ["s","i","m","o","n"];
-const combinacionCierre = ["c","l","o","s","e"];
-
-contadorVisitas++;
-localStorage.setItem('contadorVisitas', contadorVisitas);
-
-document.addEventListener('keydown', function(event) {
-    combinacion.push(event.key);
-    if (combinacion.length > combinacionCorrecta.length) {
-        combinacion.shift();
-    }
-    if (JSON.stringify(combinacion) === JSON.stringify(combinacionCorrecta)) {
-        mostrarContador();
-    }
-    if (JSON.stringify(combinacion) === JSON.stringify(combinacionCierre)) {
-        ocultarContador();
-    }
-});
-
-function mostrarContador() {
-    const contadorElement = document.getElementById('contador');
-    contadorElement.style.display = 'block';
-    contadorElement.textContent = `Número de visitas: ${contadorVisitas}`;
-}
-function ocultarContador() {
-    const contadorElement = document.getElementById('contador');
-    contadorElement.style.display = 'none';
-}
-// ---------------------------------fin------------------------------------------
-
 // ---------------------------------knowledge-----------------------------------
 const lenguajes = {
     html: '/img/knowledges/html.png',
@@ -323,8 +289,9 @@ buttons.forEach(button => {
         imageContainer.innerHTML = `<img class="img-k" src="${imageSrc}" alt="${tech} technology">`;
     });
 });
+// --------------------------------------------fin-------------------------------------------
 
-// --------------------footer---------------------------
+// -----------------------------------------footer------------------------------------------
 const carencias = document.querySelector(".car");
 const botonCar = document.querySelector(".carencias");
 let abiertoCar = false;
@@ -340,4 +307,4 @@ botonCar.addEventListener("click", () => {
         abiertoCar = false;
     }
 });
-
+// -----------------------------------------------fin--------------------------------------------
