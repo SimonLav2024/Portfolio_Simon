@@ -526,13 +526,13 @@ html {
 .carencias {
     display: flex;
     justify-content: end;
-    margin: 3rem 1rem 0rem 0rem;
     text-decoration: none;
     color: white;
     transition: all 0.7s ease-in-out;
     position: fixed;
     bottom: 40px;
     right: 0%;
+    padding: 1rem;
 }
 .carencias.open {
     margin-right: 30rem;
