@@ -530,6 +530,7 @@ html {
     text-decoration: none;
     color: white;
     transition: all 0.7s ease-in-out;
+    right: 0%;
 }
 .carencias.open {
     margin-right: 30rem;
