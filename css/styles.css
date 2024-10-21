@@ -6,6 +6,12 @@ body {
     background-color: #2980b9;
     height: 100%;
 }
+@media (max-width: 650px) {
+    body {
+        margin: initial;
+        height: 100vh;
+    }
+}
 html {
     margin: 0;
     padding: 0;
@@ -33,6 +39,8 @@ html {
 }
 .ph {
     text-shadow: 1px 2px 0 rgba(12, 12, 20, 0.507);
+    margin: 1rem 0rem 0rem 0rem;
+    padding: 0;
 }
 .ph:hover {
     animation-name: desvanecer;
@@ -49,24 +57,21 @@ html {
 .navbar-item {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin-right: 1rem;
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    position: relative;
     cursor: pointer;
     display: inline-block;
     z-index: 1;
 }
 .navbar-item.visible {
     opacity: 1;
-    transform: translateY(0);
 }
 .dropdown {
     position: absolute;
     background-color: #2c43edeb;
     min-width: 180px;
+    height: 0%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     top: 100%;
@@ -74,14 +79,14 @@ html {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
-    max-height: 0;
     overflow: hidden;
     border-radius: 10px;
 }
 .dropdown.active {
     opacity: 1;
     transform: translateY(0);
-    max-height: 400px;
+    height: 25rem;
+    max-height: 350px;
 }
 .dropdown a {
     color: rgb(255, 255, 255);
@@ -93,8 +98,31 @@ html {
 .dropdown a:hover {
     background-color: #3498db;
 }
-
-
+.navbar .icon {
+    display: none;
+}
+@media screen and (max-width: 600px){ /*esta vez la media esta para que todo lo que hay dentro se haga para la vision en el movil */
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
 /* -------------------------------fin------------------------------------ */
 
 /* -----------------------------sidebar------------------------------------- */
@@ -400,15 +428,21 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0rem 2rem 0rem 2rem;
-    
+    margin: 2rem 2rem 2rem 2rem;
+}
+@media (max-width: 650px) {
+    .parallax {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .container-foto {
     display: flex;
     flex-direction: column;
 }
 .foto {
-    width: 30rem;
+    width: 100%;
+    max-width: 30rem;
     border-radius: 10px;
     margin: 1rem 0rem 1rem 0rem;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.401);
@@ -522,6 +556,7 @@ html {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0rem 0rem 1rem 0rem;
 }
 .carencias {
     display: flex;
@@ -556,3 +591,44 @@ html {
     right: 0;
 }
 /* ------------------------------------------fin---------------------------------------------------- */
+/* Additional Media Queries */
+@media (max-width: 1200px) {
+    .navbar-item {
+        font-size: 1.3rem; /* Adjust font size for medium screens */
+    }
+
+    .knowledges {
+        flex-direction: column; /* Stack knowledge items */
+        align-items: center;
+        margin: 0 0 2rem;
+    }
+
+    .enlaceCV {
+        font-size: 1.2rem; /* Adjust CV link size */
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-item {
+        margin: 0.3rem 0; /* Adjust margin for smaller screens */
+    }
+
+    .parallax {
+        flex-direction: column;
+    }
+
+    .knowledges {
+        flex-direction: column;
+        margin: 0;
+        align-items: center; /* Center items */
+    }
+
+    .botonK {
+        width: 100%; /* Make buttons full-width */
+        padding: 10px;
+    }
+}
