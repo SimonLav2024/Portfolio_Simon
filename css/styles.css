@@ -538,42 +538,46 @@ html {
     padding: 1rem 0;
 }
 .carencias {
-    display: flex;
-    justify-content: end;
     text-decoration: none;
     color: white;
     transition: all 0.7s ease-in-out;
     position: fixed;
     bottom: 40px;
-    right: 0%;
+    left: 90%;
     padding: 1rem;
-    z-index: 2;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
 }
 .carencias.open {
-    margin-right: 20rem;
-    transform: translateY(-25px);
+    transform: translateY(-25px) translateX(-320px);
 }
 .car {
     position: fixed;
     bottom: 0;
-    right: -100%;
     height: 4rem;
     width: 27rem;
-    transition: all 0.7s ease-in-out;
-    z-index: 1;
+    z-index: 2;
     background-color: #2c43edeb;
     text-shadow: 1px 2px 0 rgba(12, 12, 20, 0.507);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     color: white;
     padding: 7px;
+    opacity: 0;
+    pointer-events: none;
 }
 .car.open {
     right: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 @media (max-width: 650px) {
     .car {
-        position: relative;
+        display: none;
+    }
+    .carencias {
+        display: none;
     }
 }
 /* ------------------------------------------fin---------------------------------------------------- */
