@@ -10,16 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         item.addEventListener('click', (e) => {
             const dropdown = item.querySelector('.dropdown');
-            if (dropdown) {
-                e.preventDefault();
+            const ph = item.querySelector('.ph');
+
+            if (dropdown && ph) {
                 dropdown.classList.toggle('active');
+                ph.classList.toggle('active');
+             
                 
                 // Cerrar otros desplegables abiertos
                 navItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         const otherDropdown = otherItem.querySelector('.dropdown');
-                        if (otherDropdown) {
+                        const ph = otherItem.querySelector('.ph');
+                        if (otherDropdown && ph) {
                             otherDropdown.classList.remove('active');
+                            ph.classList.remove('active');
+                          
                         }
                     }
                 });
@@ -35,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+    
+
 });
 
 document.getElementById("bhid").addEventListener('click', function toggleMenu(){
