@@ -44,15 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 });
-
-document.getElementById("bhid").addEventListener('click', function toggleMenu(){
-    let myNav = document.getElementById("mynav");
-    if(myNav.className === "navbar"){
-        myNav.className += " responsive"
-    }else{
-        myNav.className = "navbar"
-    }
-});
 //----------------------------------fin-----------------------------------
 
 // ------------------------------sidebar----------------------------------
